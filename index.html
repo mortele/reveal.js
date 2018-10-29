@@ -9,6 +9,11 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 
+		<!-- Font Awesome -->
+	    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -20,12 +25,104 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<style type="text/css">
+			.reveal section img { background:none; border:none; box-shadow:none; }
+			.reveal.slide .slides > section, .reveal.slide .slides > section > section {
+			  min-height: 100% !important;
+			  display: flex !important;
+			  flex-direction: column !important;
+			  justify-content: center !important;
+			  position: absolute !important;
+			  top: 0 !important;
+			  align-items: center !important;
+			}
+			section > h1, section > h2 {
+			  position: absolute !important;
+			  top: 0 !important;
+			  margin-left: auto !important;
+			  margin-right: auto !important;
+			  left: 0 !important;
+			  right: 0 !important;
+			  text-align: center !important;
+			}
+			.print-pdf .reveal.slide .slides > section, .print-pdf .reveal.slide .slides > section > section {
+			  min-height: 770px !important;
+			  position: relative !important;
+			}
+			.reveal h1,
+			.reveal h2,
+			.reveal h3,
+			.reveal h4,
+			.reveal h5,
+			.reveal h6 {
+			  margin: 0 0 20px 0;
+			  color: #eee8d5;
+			  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			  text-transform: none;
+			}
+			.reval h6 {
+				font-size: 4pt;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1 </section>
+				<section data-background-image="img/hylleraas-background-1.jpg">
+					<style type="text/css">
+						.reveal .reveal_section {
+						    position: relative;
+						}
+						.top-left-logo {
+							position: absolute;
+							left: -150px;
+							top: 40px;
+						}
+						.logo {
+							height: 70px;
+							width: auto;
+						}
+						.bottom-rule {
+							position: absolute;
+							left: -150px;
+							bottom: 30px;
+						}
+						.author {
+							position: absolute;
+							left: -150px;
+							top: 430px;
+							line-height: 0px;
+						}
+						.reveal p {
+							line-height: 0.0;
+						}
+					</style>
+					<div class="top-left-logo">
+						<img class="logo" src="img/hylleraas-white-rgb.png">
+					</div>
+					<div style="position: absolute; top: 250px;">
+						<h4>Adaptive resolution molecular dynamics&mdash;hybrid particle-field</h1>
+					</div>
+					<div class="author">
+						<p style="text-align: left; font-size: 1.8rem;">Morten Ledum</p>
+						<p style="text-align: left; font-size: 1.2rem;"><i class="fas fa-envelope"></i> morten.ledum@gmail.com</p>
+						<p style="text-align: left; font-size: 1.2rem;"><i class="icon-github"></i> github.com/mortele</p>
+					</div>
+					<div class="bottom-rule">
+						<img src="img/sfflogo-white.png">
+						<img src="img/uiologo-white.png">					
+					</div>
+				</section>
 				<section>Slide 2</section>
+				<section>Slide 3</section>
+				<section>Slide 4</section>
+				<section>Slide 5</section>
+				<section>Slide 6</section>
+				<section>Slide 7</section>
+				<section>Slide 8</section>
+				<section>Slide 9</section>
+				<section>Slide 10</section>
 			</div>
 		</div>
 
@@ -37,12 +134,18 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+				// Parallax background image
+				parallaxBackgroundImage: "img/hylleraas-background-1.jpg",
+
+				// Parallax background size
+				//parallaxBackgroundSize: '5401px 2801px',
+
+				// Number of pixels to move the parallax background per slide
+				// - Calculated automatically unless specified
+				// - Set to 0 to disable movement along an axis
+				parallaxBackgroundHorizontal: 100,
+				
+				center: false
 			});
 		</script>
 	</body>
